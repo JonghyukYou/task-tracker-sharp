@@ -1,0 +1,324 @@
+/* 전체 기본 설정 */
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1f2933;
+  background-color: #f3f4f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f3f4f6;
+}
+
+/* 공통 레이아웃 */
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 24px 12px;
+}
+
+.app-inner {
+  width: 100%;
+  max-width: 960px;
+}
+
+/* 헤더 */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.app-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-title-badge {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: #e5edff;
+  color: #364fc7;
+}
+
+.app-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-link {
+  text-decoration: none;
+  color: #4b5563;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.app-link:hover {
+  background-color: #e5e7eb;
+}
+
+.app-username {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+/* 버튼 */
+.btn {
+  border: none;
+  border-radius: 999px;
+  font-size: 14px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.05s ease, box-shadow 0.15s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+  box-shadow: 0 8px 16px rgba(79, 70, 229, 0.25);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #4338ca, #4f46e5);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.btn-secondary:hover {
+  background-color: #d1d5db;
+}
+
+/* 메인 카드 */
+.app-main {
+  background-color: white;
+  border-radius: 16px;
+  padding: 20px 20px 24px;
+  box-shadow:
+    0 18px 45px rgba(15, 23, 42, 0.06),
+    0 0 0 1px rgba(15, 23, 42, 0.03);
+}
+
+/* 페이지 타이틀 */
+.page-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* 인증 폼 공통 */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 360px;
+}
+
+.form-label {
+  font-size: 13px;
+  color: #4b5563;
+  margin-bottom: 2px;
+}
+
+.form-input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 1px rgba(79, 70, 229, 0.35);
+}
+
+.form-error {
+  color: #b91c1c;
+  font-size: 13px;
+}
+
+/* 대시보드 */
+.dashboard-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 12px;
+}
+
+.dashboard-subtitle {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* 통계 카드 */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* 섹션 */
+.section {
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.section-caption {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* 폼 카드 */
+.card {
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 14px 14px 12px;
+  background-color: #f9fafb;
+  margin-bottom: 16px;
+}
+
+/* Task 폼 */
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-form-row {
+  display: flex;
+  gap: 8px;
+}
+
+.task-form-row > * {
+  flex: 1;
+}
+
+/* Task 리스트 */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.task-item-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.task-title-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.task-status-icon {
+  font-size: 16px;
+}
+
+.task-title {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.task-meta {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.task-actions {
+  display: flex;
+  gap: 6px;
+}
+
+/* 랭킹 테이블 */
+.ranking-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.ranking-table th,
+.ranking-table td {
+  padding: 6px 8px;
+}
+
+.ranking-table thead th {
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.ranking-row-me {
+  background-color: #eef2ff;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .app {
+    padding: 12px 8px;
+  }
+  .app-main {
+    padding: 14px 12px 16px;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
